@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: serif;
+        }
+
+        .con {
+            background-color: blue;
+            color: white;
+            height: 87vh;
+            width: 600px;
+            margin: 0px auto;
+            text-align: center;
+            position: relative;
+
+        }
+
+        .form {
+            width: 490px;
+            margin: 50px 55px;
+            padding: 2rem 10px;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            border-radius: 50px;
+            border: 2px solid white;
+            padding: 5px;
+            width: 35px;
+            height: 35px;
+            font-size: 20px;
+        }
+
+        form>h3 {
+            color: white;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .form-field>label {
+            color: rgb(191 199 209);
+            font-weight: bold;
+            font-size: 15px;
+            text-align: left;
+        }
+
+        .form-field>input {
+            border-radius: 18px;
+            border: 1px solid white;
+            height: 32px;
+            background-color: #a2aaaa;
+            border: 1px solid #b6c1c0;
+        }
+
+        .form-field>span {
+            font-size: 12px;
+            text-align: left;
+            color: rgb(233, 232, 232);
+            margin-left: 5px;
+            margin-top: -8px;
+        }
+
+        .mark {
+            position: absolute;
+            top: 15px;
+            left: 22px;
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+        }
+
+        .circle {
+            width: 8px;
+            height: 8px;
+            border-radius: 50px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: orange;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: 2px solid white;
+            margin: auto;
+
+            i {
+                width: 45px;
+                height: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 29px;
+                color: white;
+            }
+        }
+
+        .btn-submit {
+            background-color: #d9a600;
+            color: black;
+            font-size: 15px;
+            width: 100%;
+            height: 36px;
+            border: 1px solid #d9a600;
+            border-radius: 18px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        label:has(+ input[required])::after {
+            content: " *";
+            color: red;
+        }
+
+        input:focus {
+            border: 1px solid grey;
+            outline: none;
+            color: white;
+            padding-left: 20px;
+        }
+
+        @media (max-width: 994px) {
+            .con {
+                height: 93vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con" id="form">
+        <i class="fa-solid fa-xmark close" onclick="document.getElementById('form').style.display='none'"></i>
+        <form class="form">
+            <div class="form-field">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="name" required />
+            </div>
+            <div class="form-field">
+                <label for="address1">Where are you</label>
+                <input type="text" id="address1" name="address1" required />
+                <span>Street Address</span>
+            </div>
+            <div class="form-field">
+                <!-- <label for="address2">Name</label> -->
+                <input type="text" id="address2" name="address2" />
+                <span>Address Line2</span>
+            </div>
+            <div class="form-field">
+                <!-- <label for="fname">City</label> -->
+                <input type="text" id="fname" name="city" />
+                <span>City</span>
+            </div>
+            <input type="submit" value="SUBMIT" class="btn-submit" />
+        </form>
+
+    </div>
+</body>
+
+</html>

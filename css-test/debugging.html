@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout Task</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+
+        nav {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        header {
+            background-color: lightblue;
+            padding: 40px;
+            text-align: center;
+        }
+
+
+        .main-content {
+            width: 1000px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            /* align-items: center; */
+            /* justify-content: center; */
+
+        }
+
+
+        .left-content {
+            width: 650px;
+            background-color: #eee;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+        }
+
+        .right-content {
+            width: 350px;
+            background-color: #ddd;
+            padding: 20px;
+        }
+
+
+        .left-sub-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 10% 0px 0px 0px;
+        }
+
+        .sub-box {
+            width: 280px;
+            height: 150px;
+            background-color: coral;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .right-sub-box {
+            width: 300px;
+            height: 320px;
+            background-color: lightgreen;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        @media screen and (max-width:550px) {
+            .main-content{
+                display: block;
+            }
+            .left-sub-container{
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav>
+        Navigation
+    </nav>
+
+
+    <header>
+        Header
+    </header>
+
+
+    <main class="main-content">
+
+        <section class="left-content">
+
+            Left Content
+
+            <div class="left-sub-container">
+
+                <div class="sub-box">
+                    Sub Content 1
+                </div>
+
+                <div class="sub-box">
+                    Sub Content 2
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="right-content">
+
+            Right Content
+
+            <div class="right-sub-box">
+                Sub Content
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Footer
+    </footer>
+
+</body>
+
+</html>

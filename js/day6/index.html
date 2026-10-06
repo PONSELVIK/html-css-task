@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day5-string methods</title>
+    <style>
+        #discount_field {
+            background-color: rgb(226, 183, 103);
+            color: white;
+            font-size: 18px;
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="price"></p>
+    <p id="final_price"></p>
+    <p id="discount_field"></p>
+    <script>
+        let price = prompt("enter your total Purchase Value");
+        price = Number(price);
+        console.log(price);
+        let discount = 0;
+        if (price >= 3000) {
+            discount = price * 10 / 100;
+            let finalPrice = price - discount;
+            console.log(finalPrice);
+            // document.write(`Your Purchase Price:${price}`);
+            document.getElementById("price").innerHTML = (`Your Purchase Price: Rs.${price}/-`);
+            document.getElementById("final_price").innerHTML = (`Your Discount Price: Rs.${finalPrice}/-`);
+            document.getElementById("discount_field").innerHTML = (`Rs.${discount} Discount Added!`);
+        }
+        else {
+            console.log(price);
+            document.getElementById("price").innerHTML = (`Your Purchase Price:Rs.${price}/-`);
+            document.getElementById("discount_field").innerHTML = "Sorry!  Discount Not Applied"
+            document.getElementById("discount_field").style.backgroundColor = "red";
+        }
+    </script>
+</body>
+
+</html>
